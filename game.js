@@ -14,23 +14,25 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
     let result;
+    let finalResult
     for (let i = 0; i < 5; i++) {
         let result = play();
-        if (result=="You win"){
+        if (result == "You win") {
             playerScore += 1;
-        }else if(result=="You loose"){
-            computerScore +=1;
+        } else if (result == "You loose") {
+            computerScore += 1;
         }
         // console.clear();
     }
-    if (playerScore > computerScore){
-        result = "YOU HAVE WON"
-    }else{
-        result = "YOU HAVE LOOSE"
-    }
+    // if (playerScore > computerScore){
+    //     result = "YOU HAVE WON"
+    // }else{
+    //     result = "YOU HAVE LOOSE"
+    // }
 
-    // result = playerScore > computerScore ? "YOU HAVE WON": "YOU HAVE LOOSE";
+    playerScore > computerScore ? finalResult = "YOU HAVE WON" : finalResult = "YOU HAVE LOOSE";
     console.log(result + `\n Your score is ${playerScore}`)
+
 }
 
 function play() {
