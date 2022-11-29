@@ -28,7 +28,7 @@ function getComputerChoice() {
 
 //Eleccion jugador
 function getPlayerChoice(){
-    playerSelection = prompt("Elige una opcion").toUpperCase();
+    playerSelection = prompt("Choose Rock, Paper, Scissors").toUpperCase();
     console.log(playerSelection);
     return playerSelection;
 
@@ -41,10 +41,18 @@ function playRound(playerSelection, computerSelection) {
     let result;
     if (playerSelection == computerSelection){
         result = "Draw"
+    }else if(playerSelection == "SCISSORS" && computerSelection == "PAPER"){
+        result = "You win"
+    }else if(playerSelection == "ROCK" && computerSelection == "SCISSORS"){
+        result = "You win"
+    }else if(playerSelection == "PAPER" && computerSelection == "ROCK"){
+        result = "You win"
     }else{
-        result = "Win or lose"
+        result = "You loose"
     }
-    console.log(result)
+
+
+        console.log(result)
     return result;
 
 }
